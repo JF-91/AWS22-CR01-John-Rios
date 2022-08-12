@@ -1,0 +1,277 @@
+/*--------------------------Fonts------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+
+/*--------------------------HTML------------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    height: 100vh;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+}
+
+.container > *{
+    padding: 2rem;
+    text-align: center;
+}
+/*--------------------------Navbar------------------------*/
+
+.navbar{
+    grid-area: navbar;
+    background-color: black;
+}
+
+/*navbar flex */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.nav-container >div{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+}
+
+/*Logo animation and navbar's buttons*/
+
+.logo:hover{
+    transform:scale(1.3);
+}
+.nav-button:hover{
+    transform:scale(1.3);
+}
+
+
+
+
+/*----------------------Header-------------------------*/
+.header{
+    grid-area: header;
+    padding: 0;
+
+    display: flex;
+    align-items: flex-end;
+    
+
+
+    background-color: black;
+    background-image: url("./pics/keyboard.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    
+    
+    
+
+    
+    
+    
+}
+
+.container-header{
+    display: flex;
+    padding-left: 12rem;
+
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-end;
+   
+    
+    
+    
+}
+
+
+
+/*--------------------------Main------------------------*/
+.main{
+    grid-area: main;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    background-color: #1D191A;
+}
+
+.cards-main-flex-row{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.container-main > div h1, div ul li{
+    color: white;
+    list-style: none;
+    font-size: 0.6rem;
+}
+
+/*Cards with info*/
+.cards-main {
+    
+   
+    
+    border: 0.2rem;
+    border-radius: 0.5rem;
+    background-color: #396898;
+    margin: 1rem;
+    height: 7rem;
+    width: 12rem;
+}
+
+
+
+
+
+
+/*--------------------------Footer------------------------*/
+.footer{
+    grid-area: footer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: black;
+}
+
+
+
+
+
+
+/*--------------------------Grid layout------------------------*/
+.container {
+    display: grid;
+    grid-template: "navbar navbar navbar"       12vh
+                    "header header header"      50vh
+                    "main   main    main"       30vh
+                    "footer footer  footer"     20vh /
+                    
+                    auto    auto    auto;
+}
+
+
+
+
+/*--------------------------Media Querys @ ------------------------*/
+
+
+@media all and (max-width: 767px) {
+        
+
+.navbar{
+    grid-area: navbar;
+    background-color: black;
+}
+
+/*navbar flex */
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+.nav-container > div a {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+/*Logo animation and navbar's buttons*/
+
+.logo:hover{
+    transform:scale(1.3);
+}
+.nav-button:hover{
+    transform:scale(1.3);
+}
+.nav-imput{
+    height: 2rem; 
+    width: 10rem;
+    border-radius: 0.5rem;
+}
+
+/*----------------------Header-------------------------*/
+
+.tittle-header{
+    font-size: medium;
+}
+.paragraf-header{
+    font-size: small;
+}
+
+
+
+
+
+
+/*--------------------------Main------------------------*/
+.main{
+    grid-area: main;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    background-color: #1D191A;
+}
+
+.cards-main-flex-row{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container-main > div h1, div ul li{
+    color: white;
+    list-style: none;
+    font-size: 0.6rem;
+}
+
+/*Cards with info*/
+.cards-main {
+    
+   
+    
+    border: 0.2rem;
+    border-radius: 0.5rem;
+    background-color: #396898;
+    margin: 1rem;
+    height: 7rem;
+    width: 12rem;
+}
+
+
+
+/*--------------------------Grid layout------------------------*/
+.container {
+    display: grid;
+    grid-template: "navbar navbar navbar"       30vh
+                    "header header header"      50vh
+                    "main   main    main"       80vh
+                    "footer footer  footer"     20vh /
+                    
+                    auto    auto    auto;
+}
+
+
+}
+
+
+
+
+
+
